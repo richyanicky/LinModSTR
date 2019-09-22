@@ -1,0 +1,5 @@
+snpstr.phase2 <- read.csv("~/Downloads/snpstr phase2.csv")
+logitMod <- glm(normpld3 ~ p3 + snpld3, data=snpstr.phase2, family=binomial(link="logit"))
+summary(logitMod)
+logitMod <- glm(normpld3 ~ as.factor(p3) + as.factor(snpld3), data=snpstr.phase2, family=binomial(link="logit"))
+summary(logitMod)
